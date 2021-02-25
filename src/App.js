@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router ,Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router ,Route, Switch,Redirect } from "react-router-dom";
 import HomePage from './component/views/HomePage/HomePage'
 import LoginPage from './component/views/LoginPage/LoginPage'
 import AllUsers from './component/views/AllUsers/AllUsers'
@@ -10,7 +10,7 @@ import NavBar from './component/views/NavBar/NavBar'
 function App() {
   return (
     <div style={{height:'100%'}}>
-       <Router>
+       <Router >
        <NavBar />
        <Switch>
         <Route exact path="/home" component={(HomePage)} />
@@ -19,6 +19,7 @@ function App() {
         <Route exact path="/blogs" component={(AllBlogs)} />
         <Route exact path="/blogs/:id" component={(DetailBlogPage)} />
         </Switch>
+        <Redirect from="/" to="/home" />
        </Router>
     </div>
   );
