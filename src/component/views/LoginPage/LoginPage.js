@@ -8,7 +8,6 @@ import 'antd/dist/antd.css';
 const { Title } = Typography;
 
 function LoginPage(props) {
-  const data = props.location.state ? props.location.state.message : "Log In"
   const [Users, setUsers] = useState([]);
   useEffect(() => {
     Axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
@@ -64,7 +63,6 @@ function LoginPage(props) {
         return (
           <div className="LoginPage">
             <form onSubmit={handleSubmit} style={{ width: '350px' }}>
-
               <Form.Item required>
                 <Input
                   id="email"

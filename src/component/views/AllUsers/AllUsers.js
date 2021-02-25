@@ -8,7 +8,6 @@ function AllUsers(props) {
   if (auth === null) {
     props.history.push({
       pathname: '/login',
-      state: { message: "Please Login to access pages" },
     })
   }
   const [Users, setUsers] = useState([]);
