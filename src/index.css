@@ -24,7 +24,6 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
 }
 /* home-page code */
 .HomePage{
@@ -32,7 +31,6 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100%;
 }
 /* button code */
 .button {
@@ -51,8 +49,27 @@ html, body {
   justify-content: center;
   margin-top: 10px;
 }
+.header{
+  text-align: center;
+}
 
-/* table layout */
-table{
-  table-layout: fixed !important;
+/* mobile view */
+@media screen and (max-width: 700px) {
+  /* header */
+  h2.ant-typography {
+    font-size: 1.2rem !important;
+    margin-bottom: 4vh !important;
+}
+/* login form */
+form{
+  width: 300px !important;
+}
+  .filter{
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: center;
+  }
+  .ant-table-content {
+    overflow-x: scroll;
+}
 }

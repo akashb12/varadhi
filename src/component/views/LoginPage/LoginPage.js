@@ -63,8 +63,6 @@ function LoginPage(props) {
         } = props;
         return (
           <div className="LoginPage">
-
-            <Title level={2}>{data}</Title>
             <form onSubmit={handleSubmit} style={{ width: '350px' }}>
 
               <Form.Item required>

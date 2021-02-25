@@ -126,7 +126,7 @@ function AllBlogs(props) {
       dataIndex: 'VIEW',
       render: (text, record) => (
         <Link to={'/blogs/' + record.BLOGID}>
-          {"Click"}
+          {"View Blog"}
         </Link>
       ),
     },
@@ -145,7 +145,7 @@ function AllBlogs(props) {
         {selectAuthor}
       </Select></div>
 
-      <Table dataSource={Blogs} columns={columns} />;
+      <Table scroll={{ x: 400 }} dataSource={Blogs} columns={columns} />;
     </div>
   )
 }
